@@ -1,13 +1,16 @@
 'use client';
 
+import { useState, useRef } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import { ArrowLeft, Lightbulb, Target } from 'lucide-react';
+import { ArrowLeft, Lightbulb, Target, Play, Pause } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 export default function PresentationPage() {
   const router = useRouter();
+  const [isPlaying, setIsPlaying] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
   const heroImages = [
     { src: '/images/1.jpg', alt: 'Khối đại đoàn kết dân tộc' },
     { src: '/images/2.jpg', alt: 'Lễ hội văn hóa dân gian trên sông' },
@@ -294,6 +297,61 @@ export default function PresentationPage() {
               </CardContent>
             </Card>
           </div>
+
+          {/* Video Section */}
+          <div className="mt-16 mb-8 animate-in fade-in duration-1000 delay-500">
+            <Card className="border-2 border-blue-200 shadow-lg">
+              <CardHeader className="bg-gradient-to-r from-blue-50 to-cyan-50">
+                <CardTitle className="text-2xl text-center">
+                  Video giới thiệu
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="pt-6">
+                <div className="relative max-w-4xl mx-auto rounded-xl overflow-hidden shadow-2xl bg-black/20">
+                  <video
+                    ref={videoRef}
+                    src="/video/vnr202.mp4"
+                    className="w-full h-auto"
+                    controls={isPlaying}
+                    onPlay={() => setIsPlaying(true)}
+                    onPause={() => setIsPlaying(false)}
+                    onEnded={() => setIsPlaying(false)}
+                  />
+                  {!isPlaying && (
+                    <div className="absolute inset-0 flex items-center justify-center bg-black/30 backdrop-blur-sm transition-opacity duration-300">
+                      <Button
+                        onClick={() => {
+                          videoRef.current?.play();
+                          setIsPlaying(true);
+                        }}
+                        size="lg"
+                        className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white rounded-full w-20 h-20 p-0 shadow-2xl hover:scale-110 transition-transform duration-300"
+                        aria-label="Play video"
+                      >
+                        <Play className="w-10 h-10 ml-1" fill="white" />
+                      </Button>
+                    </div>
+                  )}
+                </div>
+                {isPlaying && (
+                  <div className="mt-4 text-center">
+                    <Button
+                      onClick={() => {
+                        videoRef.current?.pause();
+                        setIsPlaying(false);
+                      }}
+                      variant="outline"
+                      className="bg-white/80 hover:bg-white"
+                    >
+                      <Pause className="w-4 h-4 mr-2" />
+                      Tạm dừng
+                    </Button>
+                  </div>
+                )}
+              </CardContent>
+            </Card>
+          </div>
+          
         </div>
       </div>
     </div>

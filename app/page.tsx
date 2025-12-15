@@ -1,12 +1,15 @@
 'use client';
 
+import { useState, useRef } from 'react';
 import { useRouter } from 'next/navigation';
-import { BookOpen, Lightbulb } from 'lucide-react';
+import { BookOpen, Lightbulb, Play, Pause } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 
 export default function Home() {
   const router = useRouter();
+  const [isPlaying, setIsPlaying] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-red-50 via-yellow-50 to-orange-100">
@@ -63,6 +66,8 @@ export default function Home() {
               Đọc toàn văn nghị quyết
             </Button>
           </div>
+
+          
         </div>
       </div>
     </div>
