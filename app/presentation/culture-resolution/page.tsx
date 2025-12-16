@@ -169,7 +169,7 @@ export default function CultureResolutionPage() {
 
           </div>
 
-          Video Section
+          {/* Video Section */}
           <div className="mt-16 mb-8 animate-in fade-in duration-1000 delay-500">
             <Card className="border-2 border-blue-200 shadow-lg">
               <CardHeader className="bg-gradient-to-r from-blue-50 to-cyan-50">
@@ -181,7 +181,7 @@ export default function CultureResolutionPage() {
                 <div className="relative max-w-4xl mx-auto rounded-xl overflow-hidden shadow-2xl bg-black/20">
                   <video
                     ref={videoRef}
-                    src="/video/vnr202.mp4"
+                    src="/video/vnr202_2.mp4"
                     className="w-full h-auto"
                     controls={isPlaying}
                     onPlay={() => setIsPlaying(true)}

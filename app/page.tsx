@@ -12,8 +12,21 @@ export default function Home() {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-red-50 via-yellow-50 to-orange-100">
-      <div className="container mx-auto px-4 py-12">
+    <>
+      <div 
+        className="fixed inset-0 w-full h-full -z-10"
+        style={{
+          backgroundImage: "url('/images/background.jpg')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          backgroundAttachment: 'fixed'
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-br from-red-50/80 via-yellow-50/80 to-orange-100/80 backdrop-blur-sm"></div>
+      </div>
+      <div className="relative z-10 min-h-screen">
+        <div className="container mx-auto px-4 py-12">
         <div className="text-center mb-12 animate-in fade-in duration-1000">
           <h1 className="text-4xl md:text-6xl font-bold text-red-800 mb-4">
             NGHỊ QUYẾT TRUNG ƯƠNG 5 KHÓA VIII (1998)
@@ -69,7 +82,8 @@ export default function Home() {
 
           
         </div>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
