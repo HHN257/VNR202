@@ -13,7 +13,7 @@ export default function PresentationPage() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const heroImages = [
     { src: '/images/1.jpg', alt: 'Khối đại đoàn kết dân tộc' },
-    { src: '/images/2.jpg', alt: 'Lễ hội văn hóa dân gian trên sông' },
+    { src: '/images/first.png', alt: 'Lễ hội văn hóa dân gian trên sông' },
     { src: '/images/3.jpg', alt: 'Không gian văn hóa Việt Nam' },
     { src: '/images/4.jpg', alt: 'Quốc kỳ Việt Nam' },
     { src: '/images/5.jpg', alt: 'Rước kiệu và múa rồng' },
@@ -27,12 +27,12 @@ export default function PresentationPage() {
       alt: string;
     }
   > = {
-    'tong-quan': { src: '/images/1.jpg', alt: 'Vị trí, vai trò của văn hóa' },
-    'ban-sac': { src: '/images/2.jpg', alt: 'Bản sắc và khái niệm văn hóa' },
-    'am-ber': { src: '/images/3.jpg', alt: 'Văn hóa Việt Nam thống nhất trong đa dạng' },
+    'tong-quan': { src: '/images/second.webp', alt: 'Bối cảnh chung sau đổi mới (1986 – 1996)' },
+    'ban-sac': { src: '/images/first page/first.png', alt: 'Bản sắc và khái niệm văn hóa' },
+    'am-ber': { src: '/images/first page/3.jpg', alt: 'Văn hóa Việt Nam thống nhất trong đa dạng' },
     'purple': { src: '/images/4.jpg', alt: 'Văn hóa là một mặt trận' },
-    'nhiem-vu': { src: '/images/5.jpg', alt: 'Mười nhiệm vụ phát triển văn hóa' },
-    'phong-trao': { src: '/images/6.jpg', alt: 'Phong trào toàn dân đoàn kết xây dựng đời sống văn hóa' },
+    'nhiem-vu': { src: '/images/first page/5.jpg', alt: 'Mười nhiệm vụ phát triển văn hóa' },
+    'phong-trao': { src: '/images/first page/6.jpg', alt: 'Phong trào toàn dân đoàn kết xây dựng đời sống văn hóa' },
     'y-nghia': { src: '/images/7.jpg', alt: 'Ý nghĩa chung của nghị quyết' },
   };
 
@@ -78,38 +78,21 @@ export default function PresentationPage() {
             <Card id="tong-quan" className="border-2 border-blue-200 shadow-lg">
               <CardHeader className="bg-gradient-to-r from-blue-50 to-cyan-50">
                 <CardTitle className="text-2xl">
-                  I. Vị trí, vai trò của văn hóa
+                  I. Bối cảnh chung sau đổi mới (1986 – 1996)
                 </CardTitle>
               </CardHeader>
-              <CardContent className="pt-6 text-gray-700 leading-relaxed space-y-4">
+              <CardContent className="pt-2 text-gray-700 leading-relaxed space-y-4">
                 {renderSectionImage('tong-quan')}
-                <ul className="list-disc pl-6 space-y-2">
-                  <li className="font-semibold text-gray-800">Văn hóa là nền tảng tinh thần của xã hội</li>
-                  <li className="font-semibold text-gray-800">Là mục tiêu của sự phát triển</li>
-                </ul>
-                <p className="pl-6 text-gray-600">
-                  Hướng tới con người có trí tuệ, đạo đức, lối sống lành mạnh.
-                </p>
-                <ul className="list-disc pl-6 space-y-2">
-                  <li className="font-semibold text-gray-800">Là động lực của sự phát triển</li>
-                </ul>
-                <p className="pl-6 text-gray-600">
-                  Nâng cao dân trí, thúc đẩy sáng tạo, tạo sức mạnh nội sinh cho đất nước.
-                </p>
-                <ul className="list-disc pl-6 space-y-2">
-                  <li className="font-semibold text-gray-800">Văn hóa gắn liền với phát triển kinh tế – xã hội</li>
-                </ul>
-                <div className="pl-6 space-y-1 text-gray-600">
-                  <p>Phát triển kinh tế phải hài hòa với phát triển văn hóa.</p>
-                  <p>Xây dựng xã hội công bằng, văn minh phải dựa trên giá trị văn hóa tốt đẹp.</p>
-                </div>
-                <ul className="list-disc pl-6 space-y-2">
-                  <li className="font-semibold text-gray-800">Văn hóa góp phần củng cố nền tảng tư tưởng của Đảng</li>
-                </ul>
-                <div className="pl-6 space-y-1 text-gray-600">
-                  <p>Đấu tranh chống lại các quan điểm sai lệch.</p>
-                  <p>Chống suy thoái đạo đức, lối sống.</p>
-                  <p>Ngăn chặn tác động tiêu cực của toàn cầu hóa.</p>
+                <p>Việt Nam ra khỏi khủng hoảng kinh tế – xã hội nhưng vẫn còn nhiều hạn chế.</p>
+                <p>Xác định con đường đi lên CNXH ngày càng rõ ràng.</p>
+                <p>Nhiệm vụ quan trọng: chuẩn bị nền tảng để công nghiệp hóa, hiện đại hóa (CNH–HĐH).</p>
+                <div>
+                  <p className="font-semibold text-gray-800 mb-2">Đánh giá chung 10 năm đổi mới:</p>
+                  <ul className="list-disc pl-6 space-y-1">
+                    <li>Thành tựu to lớn, ý nghĩa quan trọng.</li>
+                    <li>Kinh tế tăng trưởng, chính trị ổn định, quốc phòng – an ninh vững mạnh.</li>
+                    <li>Tuy nhiên vẫn còn yếu kém: nguy cơ tụt hậu, chệch hướng, trì trệ…</li>
+                  </ul>
                 </div>
               </CardContent>
             </Card>
@@ -117,46 +100,25 @@ export default function PresentationPage() {
             <Card id="ban-sac" className="border-2 border-green-200 shadow-lg">
               <CardHeader className="bg-gradient-to-r from-green-50 to-emerald-50">
                 <CardTitle className="text-2xl">
-                  II. Xây dựng nền văn hóa Việt Nam tiên tiến, đậm đà bản sắc dân tộc
+                  II. Đại hội VIII (1996) – Mốc khởi đầu thời kỳ đẩy mạnh CNH–HĐH
                 </CardTitle>
               </CardHeader>
               <CardContent className="pt-6 text-gray-700 leading-relaxed space-y-4">
                 {renderSectionImage('ban-sac')}
+                <p>Đại hội VIII họp năm 1996, bối cảnh: khoa học – công nghệ phát triển mạnh, CNXH thoái trào trên thế giới.</p>
+                <p>Sau 10 năm đổi mới, Việt Nam đạt nhiều thành tựu: kinh tế, chính trị, xã hội, quốc phòng, an ninh.</p>
                 <div>
-                  <h3 className="font-semibold text-gray-800 mb-2">1. Văn hóa tiên tiến</h3>
-                  <ul className="list-disc pl-6 space-y-1">
-                    <li>Mang tinh thần yêu nước, khát vọng độc lập dân tộc và chủ nghĩa xã hội.</li>
-                    <li>Định hướng bởi chủ nghĩa Mác – Lênin và tư tưởng Hồ Chí Minh.</li>
-                    <li>Nội dung tư tưởng tiến bộ, thúc đẩy sự phát triển của con người.</li>
-                  </ul>
+                  <p className="font-semibold text-gray-800 mb-2">Đại hội nêu đặc trưng mục tiêu XHCN:</p>
+                  <p className="text-gray-600">Dân giàu – nước mạnh – xã hội công bằng – văn minh.</p>
                 </div>
-
                 <div>
-                  <h3 className="font-semibold text-gray-800 mb-2">2. Văn hóa đậm đà bản sắc dân tộc</h3>
-                  <p className="text-gray-600">
-                    Bản sắc dân tộc là tổng hòa những giá trị tinh thần được hun đúc qua hàng nghìn năm và luôn
-                    được kế thừa, phát triển trong thời kỳ hội nhập.
-                  </p>
-                  <p className="font-semibold text-gray-800 mt-3">Các giá trị cốt lõi</p>
+                  <p className="font-semibold text-gray-800 mb-2">Đề ra nhiều nhiệm vụ trọng tâm:</p>
                   <ul className="list-disc pl-6 space-y-1">
-                    <li>Tinh thần yêu nước</li>
-                    <li>Ý thức cộng đồng gắn kết</li>
-                    <li>Cần cù, sáng tạo trong lao động</li>
-                    <li>Lòng nhân ái, bao dung</li>
-                    <li>Trọng nghĩa tình – đạo lý</li>
-                    <li>Lối sống giản dị, khiêm nhường</li>
-                    <li>Tinh thần đoàn kết, tương trợ</li>
-                  </ul>
-                  <p className="text-gray-600 mt-3">
-                    Các giá trị này giúp dân tộc vượt qua hàng nghìn năm chiến tranh, thiên tai và thử thách lịch sử.
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="font-semibold text-gray-800 mb-2">3. Mối quan hệ giữa dân tộc và hiện đại</h3>
-                  <ul className="list-disc pl-6 space-y-1">
-                    <li>Bản sắc dân tộc không đối lập với hiện đại hóa.</li>
-                    <li>Trong hội nhập, tiếp thu tinh hoa văn hóa thế giới để làm giàu thêm bản sắc Việt Nam.</li>
+                    <li>Phát triển kinh tế là trung tâm.</li>
+                    <li>Xây dựng Đảng là then chốt.</li>
+                    <li>Phát huy nhân tố con người.</li>
+                    <li>Mở rộng hợp tác quốc tế.</li>
+                    <li>Đẩy mạnh CNH–HĐH.</li>
                   </ul>
                 </div>
               </CardContent>
@@ -165,51 +127,50 @@ export default function PresentationPage() {
             <Card className="border-2 border-amber-200 shadow-lg">
               <CardHeader className="bg-gradient-to-r from-amber-50 to-orange-50">
                 <CardTitle className="text-2xl">
-                  III. Văn hóa Việt Nam: Thống nhất trong đa dạng
+                  III. Phát triển giáo dục – đào tạo, khoa học – công nghệ
                 </CardTitle>
               </CardHeader>
               <CardContent className="pt-6 text-gray-700 leading-relaxed space-y-3">
                 {renderSectionImage('am-ber')}
-                <p>
-                  Việt Nam có 54 dân tộc anh em, mỗi dân tộc có ngôn ngữ, trang phục, lễ hội và phong tục riêng; văn hóa
-                  dân tộc thiểu số là bộ phận không thể tách rời của văn hóa Việt Nam.
-                </p>
-                <p>
-                  Sự đa dạng này tạo nên chiều sâu và bản sắc độc đáo của dân tộc. Đảng, Nhà nước và đội ngũ trí thức có
-                  trách nhiệm:
-                </p>
-                <ul className="list-disc pl-6 space-y-1">
-                  <li>Gìn giữ, bảo tồn.</li>
-                  <li>Phát huy giá trị di sản.</li>
-                  <li>Kết nối văn hóa các dân tộc để tạo sự thống nhất toàn diện.</li>
-                </ul>
+                <div>
+                  <p className="font-semibold text-gray-800 mb-2">Nghị quyết 02-NQ/HNTW (1996):</p>
+                  <p>Giáo dục – đào tạo là quốc sách hàng đầu.</p>
+                  <p>Mục tiêu: xây dựng con người mới, đáp ứng yêu cầu CNH–HĐH.</p>
+                </div>
+                <div>
+                  <p className="font-semibold text-gray-800 mb-2">Khoa học – công nghệ là động lực phát triển:</p>
+                  <ul className="list-disc pl-6 space-y-1">
+                    <li>Thúc đẩy ứng dụng vào sản xuất, kinh tế, quốc phòng – an ninh.</li>
+                    <li>Xây dựng tiềm lực khoa học trong nước, từng bước hình thành nền khoa học hiện đại.</li>
+                  </ul>
+                </div>
               </CardContent>
             </Card>
 
             <Card className="border-2 border-purple-200 shadow-lg">
               <CardHeader className="bg-gradient-to-r from-purple-50 to-pink-50">
                 <CardTitle className="text-2xl">
-                  IV. Văn hóa là một mặt trận
+                  IV. Xây dựng và hoàn thiện Nhà nước pháp quyền XHCN
                 </CardTitle>
               </CardHeader>
               <CardContent className="pt-6 text-gray-700 leading-relaxed space-y-3">
                 {renderSectionImage('purple')}
-                <p>
-                  Xây dựng văn hóa là nhiệm vụ lâu dài, phức tạp, đòi hỏi nỗ lực của cả hệ thống chính trị và toàn dân,
-                  cần bản lĩnh và kiên trì thực hiện.
-                </p>
                 <div>
-                  <p className="font-semibold text-gray-800">Chống lại các biểu hiện tiêu cực</p>
+                  <p className="font-semibold text-gray-800 mb-2">Tập trung 3 yêu cầu:</p>
                   <ul className="list-disc pl-6 space-y-1">
-                    <li>Thói hư tật xấu, sự xuống cấp đạo đức, các tệ nạn xã hội.</li>
-                    <li>Sự lai căng, đánh mất bản sắc.</li>
-                    <li>Các hoạt động lợi dụng văn hóa để chia rẽ, xuyên tạc.</li>
+                    <li>Phát huy dân chủ và quyền làm chủ của nhân dân.</li>
+                    <li>Xây dựng Nhà nước trong sạch, vững mạnh, hoạt động hiệu quả.</li>
+                    <li>Tăng cường sự lãnh đạo của Đảng đối với Nhà nước.</li>
                   </ul>
                 </div>
-                <p className="text-gray-600">
-                  Cảnh giác trước âm mưu “diễn biến hòa bình”, lợi dụng văn hóa, truyền thông, mạng xã hội để chống phá;
-                  bắt buộc giữ vững bản lĩnh chính trị và nền tảng tư tưởng.
-                </p>
+                <div>
+                  <p className="font-semibold text-gray-800 mb-2">Nhiệm vụ:</p>
+                  <ul className="list-disc pl-6 space-y-1">
+                    <li>Mở rộng dân chủ xã hội chủ nghĩa.</li>
+                    <li>Cải cách hành chính, cải cách tư pháp.</li>
+                    <li>Kiện toàn bộ máy, nâng cao chất lượng cán bộ, công chức.</li>
+                  </ul>
+                </div>
               </CardContent>
             </Card>
 
@@ -217,83 +178,70 @@ export default function PresentationPage() {
               <CardHeader className="bg-gradient-to-r from-emerald-50 to-green-50">
                 <CardTitle className="flex items-center gap-2 text-2xl">
                   <Target className="h-6 w-6 text-emerald-600" />
-                  V. Mười nhiệm vụ xây dựng và phát triển văn hóa
+                  V. Công tác xây dựng Đảng
                 </CardTitle>
               </CardHeader>
               <CardContent className="pt-6 text-gray-700 leading-relaxed">
                 {renderSectionImage('nhiem-vu')}
-                <ol className="list-decimal pl-6 space-y-2">
-                  <li>
-                    <span className="font-semibold text-gray-800">Xây dựng con người Việt Nam thời kỳ mới:</span>{' '}
-                    Yêu nước, nhân ái, trung thực, trách nhiệm, kỷ luật, sáng tạo; phát triển trí tuệ, đạo đức, thể chất, thẩm mỹ.
-                  </li>
-                  <li>
-                    <span className="font-semibold text-gray-800">Xây dựng môi trường văn hóa lành mạnh:</span>{' '}
-                    Gia đình văn hóa, nhà trường văn hóa, cộng đồng văn minh, cơ quan và doanh nghiệp có chuẩn mực ứng xử.
-                  </li>
-                  <li>
-                    <span className="font-semibold text-gray-800">Phát triển văn học – nghệ thuật:</span>{' '}
-                    Tác phẩm có giá trị cao về tư tưởng và nghệ thuật; khuyến khích sáng tạo trong khuôn khổ pháp luật.
-                  </li>
-                  <li>
-                    <span className="font-semibold text-gray-800">Bảo tồn và phát huy di sản văn hóa dân tộc:</span>{' '}
-                    Di sản vật thể, phi vật thể, di tích lịch sử, kiến trúc; kết hợp bảo tồn với phát triển du lịch bền vững.
-                  </li>
-                  <li>
-                    <span className="font-semibold text-gray-800">Phát triển giáo dục và đào tạo:</span>{' '}
-                    Nâng cao dân trí, đào tạo nhân lực chất lượng cao, giáo dục lý tưởng sống và lối sống đẹp.
-                  </li>
-                  <li>
-                    <span className="font-semibold text-gray-800">Đẩy mạnh khoa học – công nghệ:</span>{' '}
-                    Ứng dụng công nghệ số trong sáng tạo và quản lý văn hóa, phát triển công nghiệp văn hóa.
-                  </li>
-                  <li>
-                    <span className="font-semibold text-gray-800">Phát triển hệ thống thông tin đại chúng:</span>{' '}
-                    Xây dựng truyền thông chuyên nghiệp, lành mạnh; ngăn chặn thông tin sai lệch, tin giả, văn hóa độc hại.
-                  </li>
-                  <li>
-                    <span className="font-semibold text-gray-800">Bảo tồn và phát triển văn hóa các dân tộc thiểu số:</span>{' '}
-                    Giữ gìn tiếng nói, chữ viết, phong tục đẹp; hỗ trợ vùng khó khăn và phát triển kinh tế – văn hóa.
-                  </li>
-                  <li>
-                    <span className="font-semibold text-gray-800">Chính sách văn hóa đối với tôn giáo:</span>{' '}
-                    Tôn trọng tự do tín ngưỡng, phát huy giá trị nhân văn của các tôn giáo, ngăn chặn lợi dụng tôn giáo gây chia rẽ.
-                  </li>
-                  <li>
-                    <span className="font-semibold text-gray-800">Hoàn thiện thể chế văn hóa, mở rộng giao lưu quốc tế:</span>{' '}
-                    Hoàn thiện luật pháp, cơ chế quản lý; quảng bá văn hóa Việt Nam ra thế giới; tiếp nhận tinh hoa văn hóa nhân loại.
-                  </li>
-                </ol>
+                <div>
+                  <p className="font-semibold text-gray-800 mb-2">Yêu cầu cấp thiết:</p>
+                  <ul className="list-disc pl-6 space-y-1">
+                    <li>Giữ vững bản chất giai cấp của Đảng.</li>
+                    <li>Nâng cao phẩm chất, năng lực đội ngũ cán bộ, đảng viên.</li>
+                    <li>Kiên quyết chống tham nhũng, quan liêu.</li>
+                  </ul>
+                </div>
+                <div className="mt-4">
+                  <p className="font-semibold text-gray-800 mb-2">Đảng đề ra giải pháp:</p>
+                  <ul className="list-disc pl-6 space-y-1">
+                    <li>Tự chỉnh đốn, nâng cao sức chiến đấu.</li>
+                    <li>Đổi mới phương thức lãnh đạo của Đảng.</li>
+                    <li>Tăng cường kiểm tra, kỷ luật trong Đảng.</li>
+                  </ul>
+                </div>
               </CardContent>
             </Card>
 
             <Card id="phong-trao" className="border-2 border-yellow-200 shadow-lg">
               <CardHeader className="bg-gradient-to-r from-yellow-50 to-orange-50">
                 <CardTitle className="text-2xl">
-                  VI. Phong trào “Toàn dân đoàn kết xây dựng đời sống văn hóa”
+                  VI. Nhiệm vụ phát triển kinh tế thời kỳ mới
                 </CardTitle>
               </CardHeader>
               <CardContent className="pt-6 text-gray-700 leading-relaxed space-y-3">
                 {renderSectionImage('phong-trao')}
-                <p>
-                  Phong trào lớn được phát động trong toàn xã hội, góp phần xây dựng khu dân cư văn hóa, gia đình văn hóa,
-                  lối sống văn minh; tăng cường đoàn kết, giảm tệ nạn xã hội, nâng cao đời sống tinh thần.
-                </p>
+                <p className="font-semibold text-gray-800 mb-2">Tập trung các nhiệm vụ:</p>
+                <ul className="list-disc pl-6 space-y-1">
+                  <li>Thúc đẩy chuyển dịch cơ cấu kinh tế.</li>
+                  <li>Tăng cường đầu tư, phát triển doanh nghiệp.</li>
+                  <li>Phát triển nông nghiệp theo hướng CNH–HĐH.</li>
+                  <li>Đổi mới hệ thống tài chính – tiền tệ.</li>
+                  <li>Giải quyết việc làm, xóa đói giảm nghèo.</li>
+                  <li>Mở rộng kinh tế đối ngoại.</li>
+                </ul>
               </CardContent>
             </Card>
 
             <Card className="border-2 border-gray-200 shadow-lg">
               <CardHeader className="bg-gradient-to-r from-gray-50 to-slate-100">
                 <CardTitle className="text-2xl">
-                  VII. Ý nghĩa chung của Nghị quyết Trung ương 5 khóa VIII
+                  VII. Ý nghĩa của Đại hội VIII
                 </CardTitle>
               </CardHeader>
               <CardContent className="pt-6 text-gray-700 leading-relaxed space-y-2">
                 {renderSectionImage('y-nghia')}
-                <p>Đặt nền tảng cho chiến lược phát triển văn hóa Việt Nam thời kỳ đổi mới.</p>
-                <p>Góp phần giữ gìn và phát huy bản sắc dân tộc trong bối cảnh toàn cầu hóa.</p>
-                <p>Nâng cao vai trò văn hóa trong đời sống xã hội và quản lý nhà nước.</p>
-                <p>Xây dựng con người Việt Nam đáp ứng yêu cầu CNH – HĐH và hội nhập quốc tế.</p>
+                <p>Chính thức mở ra thời kỳ đẩy mạnh CNH–HĐH ở Việt Nam.</p>
+                <p>Cụ thể hóa mục tiêu độc lập dân tộc gắn liền với CNXH.</p>
+                <p>Xác định rõ vai trò của giáo dục, khoa học – công nghệ, nguồn lực con người.</p>
+                <div className="mt-6 pt-4 border-t border-gray-200">
+                  <Button
+                    onClick={() => router.push('/presentation/culture-resolution')}
+                    className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white"
+                    size="lg"
+                  >
+                    Tiếp tục: Nghị quyết 03-NQ/TW (1998) →
+                  </Button>
+                </div>
               </CardContent>
             </Card>
           </div>
