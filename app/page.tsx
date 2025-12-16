@@ -28,8 +28,8 @@ export default function Home() {
       <div className="relative z-10 min-h-screen">
         <div className="container mx-auto px-4 py-12">
         <div className="text-center mb-12 animate-in fade-in duration-1000">
-          <h1 className="text-4xl md:text-6xl font-bold text-red-800 mb-4">
-            NGHỊ QUYẾT TRUNG ƯƠNG 5 KHÓA VIII (1998)
+          <h1 className="text-4xl md:text-5xl font-bold text-red-800 mb-4">
+            ĐẠI HỘI ĐẠI BIỂU TOÀN QUỐC LẦN THỨ VIII VÀ BƯỚC ĐẦU THỰC HIỆN CÔNG NGHIỆP HÓA, HIỆN ĐẠI HÓA
           </h1>
           <p className="text-xl md:text-2xl text-gray-700 mt-6 max-w-4xl mx-auto leading-relaxed">
             Xây dựng và phát triển nền văn hóa Việt Nam tiên tiến, đậm đà bản sắc dân tộc – đầy đủ các
