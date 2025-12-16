@@ -2,7 +2,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Inter } from 'next/font/google';
-import { Compass, Home, Landmark, RefreshCw, Shield } from 'lucide-react';
+import { Award, Compass, Home, Landmark, Lightbulb, RefreshCw, Shield } from 'lucide-react';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -12,10 +12,11 @@ export const metadata: Metadata = {
 };
 
 const navItems = [
-  { label: 'Tổng quan Nghị quyết', href: '/presentation#tong-quan', icon: Home },
-  { label: 'Khái niệm & Bản sắc dân tộc', href: '/presentation#ban-sac', icon: Compass },
-  { label: 'Nhiệm vụ và Giải pháp xây dựng văn hóa', href: '/presentation#nhiem-vu', icon: Landmark },
-  { label: 'Phong trào xây dựng đời sống văn hóa & Ứng dụng thực tiễn', href: '/presentation#phong-trao', icon: Shield },
+  { label: 'Bối cảnh chung', href: '/presentation#tong-quan', icon: Home },
+  { label: 'Đại hội VIII (1996)', href: '/presentation#ban-sac', icon: Compass },
+  { label: 'Công tác xây dựng Đảng', href: '/presentation#nhiem-vu', icon: Landmark },
+  { label: 'Nhiệm vụ phát triển kinh tế thời kỳ mới', href: '/presentation#phong-trao', icon: Shield },
+  { label: 'Ý nghĩa của Đại hội VIII', href: '/presentation#y-nghia', icon: Award },
 ];
 
 export default function RootLayout({
@@ -28,12 +29,12 @@ export default function RootLayout({
       <body className={`${inter.className} min-h-screen flex flex-col`}>
         <header className="sticky top-0 z-50 shadow">
           <div className="bg-gradient-to-r from-amber-200 via-orange-100 to-amber-50 border-b border-amber-300/80">
-            <div className="container mx-auto flex items-center justify-between px-4 py-3 md:py-4">
+          <div className="container mx-auto flex items-center justify-between px-4 py-3 md:py-4 relative">
               <Link href="/" className="flex items-center gap-2 text-lg md:text-xl font-bold text-amber-900">
                 <RefreshCw className="h-5 w-5 md:h-6 md:w-6 text-amber-700" />
                 <span>Nghị quyết TW5 – VIII</span>
               </Link>
-              <nav className="hidden lg:flex items-center gap-3">
+              <nav className="hidden lg:flex items-center gap-3 absolute left-1/2 -translate-x-1/2">
                 {navItems.map((item) => {
                   const Icon = item.icon;
                   return (
@@ -84,28 +85,16 @@ export default function RootLayout({
                     <Home className="h-4 w-4" /> Trang chủ
                   </Link>
                   <Link
-                    href="/presentation#tong-quan"
+                    href="/presentation"
                     className="flex items-center justify-center gap-2 hover:text-white transition-colors duration-200"
                   >
-                    <Compass className="h-4 w-4" /> Tổng quan
+                    <Compass className="h-4 w-4" /> Bối cảnh chung
                   </Link>
                   <Link
-                    href="/presentation#ban-sac"
+                    href="/summary"
                     className="flex items-center justify-center gap-2 hover:text-white transition-colors duration-200"
                   >
-                    <Landmark className="h-4 w-4" /> Bản sắc & khái niệm
-                  </Link>
-                  <Link
-                    href="/presentation#nhiem-vu"
-                    className="flex items-center justify-center gap-2 hover:text-white transition-colors duration-200"
-                  >
-                    <Shield className="h-4 w-4" /> Nhiệm vụ & giải pháp
-                  </Link>
-                  <Link
-                    href="/presentation#phong-trao"
-                    className="flex items-center justify-center gap-2 hover:text-white transition-colors duration-200"
-                  >
-                    <RefreshCw className="h-4 w-4" /> Phong trào & ứng dụng
+                    <Landmark className="h-4 w-4" /> Tóm tắt
                   </Link>
                 </div>
               </div>

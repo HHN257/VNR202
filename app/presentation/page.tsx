@@ -222,7 +222,7 @@ export default function PresentationPage() {
               </CardContent>
             </Card>
 
-            <Card className="border-2 border-gray-200 shadow-lg">
+            <Card id="y-nghia" className="border-2 border-gray-200 shadow-lg">
               <CardHeader className="bg-gradient-to-r from-gray-50 to-slate-100">
                 <CardTitle className="text-2xl">
                   VII. Ý nghĩa của Đại hội VIII
@@ -247,7 +247,7 @@ export default function PresentationPage() {
           </div>
 
           {/* Video Section */}
-          <div className="mt-16 mb-8 animate-in fade-in duration-1000 delay-500">
+          {/* <div className="mt-16 mb-8 animate-in fade-in duration-1000 delay-500">
             <Card className="border-2 border-blue-200 shadow-lg">
               <CardHeader className="bg-gradient-to-r from-blue-50 to-cyan-50">
                 <CardTitle className="text-2xl text-center">
@@ -298,7 +298,7 @@ export default function PresentationPage() {
                 )}
               </CardContent>
             </Card>
-          </div>
+          </div> */}
           
         </div>
       </div>

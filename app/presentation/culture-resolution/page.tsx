@@ -169,7 +169,7 @@ export default function CultureResolutionPage() {
 
           </div>
 
-          {/* Video Section */}
+          Video Section
           <div className="mt-16 mb-8 animate-in fade-in duration-1000 delay-500">
             <Card className="border-2 border-blue-200 shadow-lg">
               <CardHeader className="bg-gradient-to-r from-blue-50 to-cyan-50">
